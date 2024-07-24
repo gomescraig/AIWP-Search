@@ -1,0 +1,68 @@
+/* Styles for AI Summary Search Bar Plugin */
+
+#ai-summary-search-form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+}
+
+#ai-summary-search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    margin-right: 10px; /* Adds space between input and button */
+}
+
+#ai-summary-search-input:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px #66afe9;
+}
+
+#ai-summary-search-form button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+}
+
+#ai-summary-search-form button:hover {
+    background-color: #333;
+}
+
+#ai-summary-search-results {
+    margin-top: 10px; /* Adjust margin top as needed */
+    padding: 20px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+#ai-summary-search-results p {
+    font-size: 18px;
+    line-height: 1.6;
+    white-space: normal; /* Ensure text wraps within container */
+    margin: 0; /* Remove default margins */
+}
+
+#ai-summary-search-results p::after {
+    content: '|'; /* Typing cursor */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
